@@ -1,4 +1,3 @@
-git commit -s
 import crypto from 'crypto'
 import { exec } from 'child_process'
 import fs from 'fs'
