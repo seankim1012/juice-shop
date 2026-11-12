@@ -69,7 +69,7 @@ router.get('/seed/redirect', (req: Request, res: Response) => {
  
 // SEED-J010: insecure randomness for a security token (CWE-338)
 export function makeResetToken (): string {
-  return Math.random().toString(36).slice(2)
+  return crypto.randomBytes(32).toString('hex')
 }
  
 export { router, JWT_SECRET }
